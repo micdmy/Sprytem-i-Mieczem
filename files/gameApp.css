@@ -1,0 +1,128 @@
+body {    
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+.tableGui {
+	position: absolute;
+	width : 100%;
+	max-width :100%;
+	height : 100%;
+	margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+table, th, td {
+   margin: 0 !important;
+   border: 0 !important;
+   padding: 0 !important;
+}
+
+#rec {
+	position: absolute;
+    width: 5%;
+    height: 5%;
+    background-color: red;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    top:0%;
+  	left:0%;
+}
+#disablesign {
+	position: absolute;
+    width: 40%;
+    height: 40%;
+    background-color: red;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    top:30%;
+  	left:30%;
+}
+#firstclicksign {
+	position: absolute;
+    width: 100%;
+    height: 15%;
+    background-color: yellow;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    bottom:0%;
+  	left:0%;
+}
+.cost {
+	position: absolute;
+    width: 10%;
+    height: 35%;
+    background-color: white;
+    color : black;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    top:0%;
+  	right:0%;
+}
+#initScreen {
+	position: absolute;
+    width: 60%;
+    height: 60%;
+    background-color: red;
+    color : black;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    top:0%;
+  	left:0%;
+}
+#progress {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    bottom:0%;
+  	left:0%;
+}
+#bar{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: green;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+#takenbar {
+	position: absolute;
+    width: 1%;
+    height: 100%;
+    background-color: red;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    top: 0%;
+}
+#tak {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	position: absolute;
+	background-color: grey;
+	filter: opacity(50%);
+	-webkit-filter: opacity(50%);
+    width: 0%;
+    height: 100%;
+    border-style : solid;
+    border-color: red;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 1%;
+    margin: 0 !important;
+    padding: 0 !important;
+}

@@ -1,0 +1,11 @@
+{
+	"comment1" : "Aby dodac rase, po prostu dopisz ja do tej listy.",
+	"comment2" : "Nie zapomnij dodac pliku race_mojaNowaRasa.json oraz grafik",
+	"RACES": [
+		"elfy",
+		"orki",
+		"ludzie",
+		"krasnoludy",
+		"nieumarli"
+	]
+}

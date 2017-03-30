@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ParameterTest</title>
+<script src="Parameter.js"></script>
+<script>
+function test() {
+		var myParameter = new Parameter(20, true, 25, 15);
+		var a = myParameter.get();
+		myParameter.set(21);
+		a = myParameter.get();
+		myParameter.set(-100);
+		a = myParameter.get();
+		myParameter.set(100);
+		a = myParameter.get();
+		myParameter.increment(-5);
+		a = myParameter.get();
+		myParameter.increment(40);
+		a = myParameter.get();
+		var bor = myParameter.getMaxMin();
+		var m = bor.max;
+		var m = bor.min;
+		myParameter.set(20);
+		a = myParameter.get();
+		myParameter.setMax(20);
+		a = myParameter.get();
+		myParameter.setMin(20);
+		a = myParameter.get();
+		myParameter.increment(1);
+		a = myParameter.get();
+		myParameter.increment(-1);
+		a = myParameter.get();
+		myParameter.setMin(-50);
+		a = myParameter.get();
+		myParameter.setMax(0);
+		a = myParameter.get();
+		myParameter.setMax(30);
+		a = myParameter.get();
+		myParameter.setMin(25);
+		a = myParameter.get();
+		myParameter.setEditable(false);
+		myParameter.set(27);
+		a = myParameter.get();
+		myParameter.increment(1);
+		a = myParameter.get();
+		myParameter.increment(-1);
+		a = myParameter.get();
+		myParameter.setMax(100);
+		a = myParameter.get();
+		myParameter.setMin(-100);
+		a = myParameter.get();
+		myParameter.setMax(10);
+		a = myParameter.get();
+		myParameter.setMax(50);
+		a = myParameter.get();
+		myParameter.setMin(49);
+		a = myParameter.get();
+		myParameter.setMin(50);
+		a = myParameter.get();
+		myParameter.setMin(51);
+		a = myParameter.get();
+}
+</script>
+</head>
+<body>
+<button type="button" onclick="test()">ParameterTest</button>
+</body>
+</html>

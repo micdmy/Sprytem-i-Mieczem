@@ -1,0 +1,778 @@
+{
+	"gui": {
+		"landscape": {
+			"elementsX": 5,
+			"elementsY": 4,
+			"percentfortable": 90
+		},
+		"portrait": {
+			"elementsX": 4,
+			"elementsY": 5,
+			"percentfortable": 90
+		}
+
+	},
+	"buildings": {
+		"plants": {
+			"bronzeMine": {
+				"typeOfClient": "plant",
+				"address": "p",
+				"offsetAddresses": {},
+				"disableAddresses": {
+					"a1": "p"
+				},
+				"gui": {
+					"landscape": {
+						"posX": 1,
+						"posY": 2
+					},
+					"portrait": {
+						"posX": 2,
+						"posY": 0
+					},
+					"img": {
+						"src": "common/sur_1.png"
+					}
+				},
+				"name": "bronzemine",
+				"twoClick": true,
+				"timeNormal": 40,
+				"timeOffset": 0,
+				"counterId": "bronzeMineCounter",
+				"resourcesList": {
+					"pos1": {
+						"resourceId": "gems",
+						"value": 1
+					}
+
+				}
+			},
+			"goldMine": {
+				"typeOfClient": "plant",
+				"address": "p",
+				"offsetAddresses": {},
+				"disableAddresses": {
+					"a1": "p"
+				},
+				"gui": {
+					"landscape": {
+						"posX": 2,
+						"posY": 2
+					},
+					"portrait": {
+						"posX": 2,
+						"posY": 1
+					},
+					"img": {
+						"src": "common/sur_2.png"
+					}
+				},
+				"name": "goldmine",
+				"twoClick": true,
+				"timeNormal": 100,
+				"timeOffset": 0,
+				"counterId": "goldMineCounter",
+				"resourcesList": {
+					"pos1": {
+						"resourceId": "gems",
+						"value": 3
+					}
+				}
+			},
+			"saphireMine": {
+				"typeOfClient": "plant",
+				"address": "p",
+				"offsetAddresses": {},
+				"disableAddresses": {
+					"a1": "p"
+				},
+				"gui": {
+					"landscape": {
+						"posX": 3,
+						"posY": 2
+					},
+					"portrait": {
+						"posX": 2,
+						"posY": 2
+					},
+					"img": {
+						"src": "common/sur_3.png"
+					}
+				},
+				"name": "saphiremine",
+				"twoClick": true,
+				"timeNormal": 140,
+				"timeOffset": 0,
+				"counterId": "saphireMineAndWoodsCounter",
+				"resourcesList": {
+					"pos1": {
+						"resourceId": "gems",
+						"value": 5
+					}
+				}
+			},
+			"woods": {
+				"typeOfClient": "plant",
+				"address": "p",
+				"offsetAddresses": {},
+				"disableAddresses": {
+					"a1": "p"
+				},
+				"gui": {
+					"landscape": {
+						"posX": 4,
+						"posY": 2
+					},
+					"portrait": {
+						"posX": 2,
+						"posY": 3
+					},
+					"img": {
+						"src": "common/sur_dr.png"
+					}
+				},
+				"name": "woods",
+				"twoClick": true,
+				"timeNormal": 140,
+				"timeOffset": 0,
+				"counterId": "saphireMineAndWoodsCounter",
+				"resourcesList": {
+					"pos1": {
+						"resourceId": "timber",
+						"value": 1
+					}
+				}
+			}
+		},
+		"shops": {
+			"herobuy": {
+				"typeOfClient": "shop",
+				"address": "s",
+				"offsetAddresses": {},
+				"disableAddresses": {
+					"a1": "s"
+				},
+				"gui": {
+					"landscape": {
+						"posX": 0,
+						"posY": 3
+					},
+					"portrait": {
+						"posX": 3,
+						"posY": 0
+					},
+					"img": {
+						"src": "ludzie/xl_boh.png"
+					}
+				},
+				"name": "herobuy",
+				"twoClick": true,
+				"timeNormal": 40,
+				"timeOffset": 0,
+				"counterId": "heroBuyCounter",
+				"resourcesList": {
+					"pos1": {
+						"resourceId": "gems",
+						"value": -3
+					}
+				}
+			},
+			"c1buy": {
+				"typeOfClient": "shop",
+				"address": "s",
+				"offsetAddresses": {},
+				"disableAddresses": {
+					"a1": "s"
+				},
+				"gui": {
+					"landscape": {
+						"posX": 1,
+						"posY": 3
+					},
+					"portrait": {
+						"posX": 3,
+						"posY": 1
+					},
+					"img": {
+						"src": "ludzie/xl_w1.png"
+					}
+				},
+				"name": "c1buy",
+				"twoClick": true,
+				"timeNormal": 20,
+				"timeOffset": 0,
+				"counterId": "c1BuyCounter",
+				"resourcesList": {
+					"pos1": {
+						"resourceId": "gems",
+						"value": -3
+					}
+				}
+			},
+			"c2buy": {
+				"typeOfClient": "shop",
+				"address": "s",
+				"offsetAddresses": {},
+				"disableAddresses": {
+					"a1": "s"
+				},
+				"gui": {
+					"landscape": {
+						"posX": 2,
+						"posY": 3
+					},
+					"portrait": {
+						"posX": 3,
+						"posY": 2
+					},
+					"img": {
+						"src": "ludzie/xl_w2.png"
+					}
+				},
+				"name": "c2buy",
+				"twoClick": true,
+				"timeNormal": 30,
+				"timeOffset": 0,
+				"counterId": "c2BuyCounter",
+				"resourcesList": {
+					"pos1": {
+						"resourceId": "gems",
+						"value": -4
+					}
+				}
+			},
+			"c3buy": {
+				"typeOfClient": "shop",
+				"address": "s",
+				"offsetAddresses": {},
+				"disableAddresses": {
+					"a1": "s"
+				},
+				"gui": {
+					"landscape": {
+						"posX": 3,
+						"posY": 3
+					},
+					"portrait": {
+						"posX": 3,
+						"posY": 3
+					},
+					"img": {
+						"src": "ludzie/xl_w3.png"
+					}
+				},
+				"name": "c3buy",
+				"twoClick": true,
+				"timeNormal": 40,
+				"timeOffset": 0,
+				"counterId": "c3BuyCounter",
+				"resourcesList": {
+					"pos1": {
+						"resourceId": "gems",
+						"value": -6
+					},
+					"pos2": {
+						"resourceId": "timber",
+						"value": -1
+					}
+				}
+			},
+			"c4buy": {
+				"typeOfClient": "shop",
+				"address": "s",
+				"offsetAddresses": {},
+				"disableAddresses": {
+					"a1": "s"
+				},
+				"gui": {
+					"landscape": {
+						"posX": 4,
+						"posY": 3
+					},
+					"portrait": {
+						"posX": 3,
+						"posY": 4
+					},
+					"img": {
+						"src": "ludzie/xl_w4.png"
+					}
+				},
+				"name": "c4buy",
+				"twoClick": true,
+				"timeNormal": 60,
+				"timeOffset": 0,
+				"counterId": "c4BuyCounter",
+				"resourcesList": {
+					"pos1": {
+						"resourceId": "gems",
+						"value": -11
+					}
+				}
+			}
+		}
+
+	},
+	"creatures": {
+
+		"creature1": {
+			"typeOfClient": "creature",
+			"address": "a",
+			"disableAddresses": {
+				"a2": "c",
+				"a3": "m"
+			},
+			"offsetAddresses": {
+				"a1": "a",
+				"a2": "h",
+				"a3": "m",
+				"a4": "k",
+				"a5": "c"
+			},
+			"gui": {
+				"landscape": {
+					"posX": 1,
+					"posY": 1
+				},
+				"portrait": {
+					"posX": 0,
+					"posY": 0
+				},
+				"img": {
+					"src": "ludzie/xl_w1.png"
+				}
+
+			},
+			"name": "c1",
+			"twoClick": true,
+			"timeNormal": 30,
+			"timeOffset": 0.5,
+			"timeFatigue": 15,
+			"timeRecover": 10,
+			"counterId": "armyCounter"
+		},
+		"creature2": {
+			"typeOfClient": "creature",
+			"address": "a",
+			"disableAddresses": {
+				"a2": "c",
+				"a3": "m"
+			},
+			"offsetAddresses": {
+				"a1": "a",
+				"a2": "h",
+				"a3": "m",
+				"a4": "k",
+				"a5": "c"
+			},
+			"gui": {
+				"landscape": {
+					"posX": 2,
+					"posY": 1
+				},
+				"portrait": {
+					"posX": 1,
+					"posY": 0
+				},
+				"img": {
+					"src": "ludzie/xl_w2.png"
+				}
+
+			},
+			"name": "c2",
+			"twoClick": true,
+			"timeNormal": 15,
+			"timeOffset": 0.5,
+			"timeFatigue": 8,
+			"timeRecover": 5,
+			"counterId": "armyCounter"
+		},
+		"creature3": {
+			"typeOfClient": "creature",
+			"address": "a",
+			"disableAddresses": {
+				"a2": "c",
+				"a3": "m"
+			},
+			"offsetAddresses": {
+				"a1": "a",
+				"a2": "h",
+				"a3": "m",
+				"a4": "k",
+				"a5": "c"
+			},
+			"gui": {
+				"landscape": {
+					"posX": 3,
+					"posY": 1
+				},
+				"portrait": {
+					"posX": 0,
+					"posY": 1
+				},
+				"img": {
+					"src": "ludzie/xl_w3.png"
+				}
+
+			},
+			"name": "c3",
+			"twoClick": true,
+			"timeNormal": 30,
+			"timeOffset": 0.5,
+			"timeFatigue": 15,
+			"timeRecover": 10,
+			"counterId": "armyCounter"
+		},
+		"creature4": {
+			"typeOfClient": "creature",
+			"address": "a",
+			"disableAddresses": {
+				"a2": "c",
+				"a3": "m"
+			},
+			"offsetAddresses": {
+				"a1": "a",
+				"a2": "h",
+				"a3": "m",
+				"a4": "k",
+				"a5": "c"
+			},
+			"gui": {
+				"landscape": {
+					"posX": 4,
+					"posY": 1
+				},
+				"portrait": {
+					"posX": 1,
+					"posY": 1
+				},
+				"img": {
+					"src": "ludzie/xl_w4.png"
+				}
+
+			},
+			"name": "c4",
+			"twoClick": true,
+			"timeNormal": 30,
+			"timeOffset": 0.5,
+			"timeFatigue": 15,
+			"timeRecover": 10,
+			"counterId": "armyCounter"
+		},
+		"hero": {
+			"typeOfClient": "creature",
+			"address": "h",
+			"disableAddresses": {
+				"a1": "h",
+				"a2": "k",
+				"a3": "c",
+				"a4": "m"
+			},
+			"offsetAddresses": {
+				"a1": "a",
+				"a2": "h",
+				"a3": "m",
+				"a4": "k",
+				"a5": "c"
+			},
+			"gui": {
+				"landscape": {
+					"posX": 1,
+					"posY": 0
+				},
+				"portrait": {
+					"posX": 1,
+					"posY": 2
+				},
+				"img": {
+					"src": "ludzie/xl_boh.png"
+				}
+
+			},
+			"name": "hero",
+			"twoClick": true,
+			"timeNormal": 15,
+			"timeOffset": 0.5,
+			"timeFatigue": 8,
+			"timeRecover": 5,
+			"counterId": "heroCounter"
+		},
+		"move": {
+			"typeOfClient": "creature",
+			"address": "m",
+			"disableAddresses": {
+				"a1": "m",
+				"a2": "h",
+				"a3": "a",
+				"a4": "k",
+				"a5": "c"
+			},
+			"offsetAddresses": {
+				"a1": "a",
+				"a2": "h",
+				"a3": "m",
+				"a4": "k",
+				"a5": "c"
+			},
+			"gui": {
+				"landscape": {
+					"posX": 2,
+					"posY": 0
+				},
+				"portrait": {
+					"posX": 1,
+					"posY": 3
+				},
+				"img": {
+					"src": "common/ruch.png"
+				}
+
+			},
+			"name": "move",
+			"twoClick": true,
+			"timeNormal": 15,
+			"timeOffset": 0.5,
+			"timeFatigue": 0,
+			"timeRecover": 0,
+			"counterId": "moveCounter"
+		},
+		"cure": {
+			"typeOfClient": "creature",
+			"address": "c",
+			"offsetAddresses": {
+				"a1": "a",
+				"a2": "h",
+				"a3": "m",
+				"a4": "k"
+			},
+			"disableAddresses": {
+				"a1": "c",
+				"a2": "h",
+				"a3": "m",
+				"a4": "k",
+				"a5": "a"
+			},
+			"gui": {
+				"landscape": {
+					"posX": 3,
+					"posY": 0
+				},
+				"portrait": {
+					"posX": 1,
+					"posY": 4
+				},
+				"img": {
+					"src": "common/cure.png"
+				}
+
+			},
+			"name": "cure",
+			"twoClick": true,
+			"timeNormal": 15,
+			"timeOffset": 0.5,
+			"timeFatigue": 0,
+			"timeRecover": 0,
+			"counterId": "moveCounter"
+		}
+	},
+	"skills": {
+		"skill0": {
+			"typeOfClient": "skill",
+			"address": "k",
+			"disableAddresses": {
+				"a1": "k",
+				"a2": "h",
+				"a3": "m",
+				"a6":"c"
+			},
+			"offsetAddresses": {
+				"a1": "a",
+				"a2": "h",
+				"a3": "m",
+				"a4": "k",
+				"a6":"c"
+			},
+			"gui": {
+				"landscape": {
+					"posX": 0,
+					"posY": 0
+				},
+				"portrait": {
+					"posX": 0,
+					"posY": 2
+				},
+				"img": {
+					"src": "ludzie/xl_zd1.png"
+				}
+
+			},
+			"name": "skill0",
+			"twoClick": true,
+			"timeNormal": 40,
+			"timeOffset": 0.5,
+			"timeFatigue": 40,
+			"timeRecover": 13,
+			"counterId": "skillsCounter"
+		},
+		"skill1": {
+			"typeOfClient": "skill",
+			"address": "k",
+			"disableAddresses": {
+				"a1": "k",
+				"a2": "h",
+				"a3": "m",
+				"a6":"c"
+			},
+			"offsetAddresses": {
+				"a1": "a",
+				"a2": "h",
+				"a3": "m",
+				"a4": "k",
+				"a6":"c"
+			},
+			"gui": {
+				"landscape": {
+					"posX": 0,
+					"posY": 1
+				},
+				"portrait": {
+					"posX": 0,
+					"posY": 3
+				},
+				"img": {
+					"src": "ludzie/xl_zd2.png"
+				}
+
+			},
+			"name": "skill1",
+			"twoClick": true,
+			"timeNormal": 80,
+			"timeOffset": 0.5,
+			"timeFatigue": 20,
+			"timeRecover": 26,
+			"counterId": "skillsCounter"
+		},
+		"skill2": {
+			"typeOfClient": "skill",
+			"address": "k",
+			"disableAddresses": {
+				"a1": "k",
+				"a2": "h",
+				"a3": "m",
+				"a6":"c"
+			},
+			"offsetAddresses": {
+				"a1": "a",
+				"a2": "h",
+				"a3": "m",
+				"a4": "k",
+				"a6":"c"
+			},
+			"gui": {
+				"landscape": {
+					"posX": 0,
+					"posY": 2
+				},
+				"portrait": {
+					"posX": 0,
+					"posY": 4
+				},
+				"img": {
+					"src": "ludzie/xl_zd3.png"
+				}
+
+			},
+			"name": "skill2",
+			"twoClick": true,
+			"timeNormal": 140,
+			"timeOffset": 0.5,
+			"timeFatigue": 0,
+			"timeRecover": 0,
+			"counterId": "skillsCounter"
+		}
+	},
+	"parameters": {
+		"counters": {
+			"bronzeMineCounter": {
+				"id": "bronzeMineCounter",
+				"max": 40,
+				"startValue": 0
+			},
+			"goldMineCounter": {
+				"id": "goldMineCounter",
+				"max": 100,
+				"startValue": 0
+			},
+			"saphireMineAndWoodsCounter": {
+				"id": "saphireMineAndWoodsCounter",
+				"max": 140,
+				"startValue": 0
+			},
+			"armyCounter": {
+				"id": "armyCounter",
+				"max": 180,
+				"startValue": 0
+			},
+			"heroBuyCounter": {
+				"id": "heroBuyCounter",
+				"max": 40,
+				"startValue": 0
+			},
+			"c1BuyCounter": {
+				"id": "c1BuyCounter",
+				"max": 20,
+				"startValue": 0
+			},
+			"c2BuyCounter": {
+				"id": "c2BuyCounter",
+				"max": 30,
+				"startValue": 0
+			},
+			"c3BuyCounter": {
+				"id": "c3BuyCounter",
+				"max": 40,
+				"startValue": 0
+			},
+			"c4BuyCounter": {
+				"id": "c4BuyCounter",
+				"max": 60,
+				"startValue": 0
+			},
+			"moveCounter": {
+				"id": "moveCounter",
+				"max": 60,
+				"startValue": 60
+			},
+			"heroCounter": {
+				"id": "heroCounter",
+				"max": 180,
+				"startValue": 60
+			},
+			"skillsCounter": {
+				"id": "skillsCounter",
+				"max": 180,
+				"startValue": 0
+			}
+		},
+		"resources": {
+			"gems": {
+				"gui": {
+					"text": "Gems:",
+					"textcolor": "gold",
+					"backgroundcolor": "black"
+				},
+				"id": "gems",
+				"startValue": 0
+
+			},
+			"timber": {
+				"gui": {
+					"text": "Timber:",
+					"textcolor": "lightgreen",
+					"backgroundcolor": "#4d2600"
+				},
+				"id": "timber",
+				"startValue": 0
+			}
+		}
+	}
+}

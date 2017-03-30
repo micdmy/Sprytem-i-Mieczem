@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mainTest</title>
+
+
+
+<link rel="stylesheet" type="text/css" href="gameApp.css">
+<script src="messagesCore/Message.js"> </script>
+<script src="messagesCore/MessageCore.js"> </script>
+<script src="TimeCore.js"> </script>
+
+<script src="core/Parameter.js"> </script>
+<script src="core/ParameterClient.js"></script>
+<script src="core/StatsClient.js"></script>
+
+
+
+<script src="parameters/Resource.js"></script>
+<script src="parameters/Counter.js"></script>
+
+<script src="transformersAndData/messageClients/MessageClient.js"></script>
+<script src="transformersAndData/messageClients/stateClients/StateClient.js"></script>
+<script src="transformersAndData/messageClients/stateClients/timeClients/TimeClient.js"></script>
+<script src="transformersAndData/messageClients/stateClients/timeClients/FatigueClient.js"></script>
+<script src="transformersAndData/messageClients/stateClients/timeClients/buildings/Building.js"></script>
+<script src="transformersAndData/messageClients/stateClients/timeClients/buildings/plants/Plant.js"></script>
+<script src="transformersAndData/messageClients/stateClients/timeClients/buildings/plants/Shop.js"></script>
+<script src="transformersAndData/messageClients/stateClients/timeClients/creatures/Creature.js"></script>
+<script src="transformersAndData/messageClients/stateClients/timeClients/creatures/Skill.js"></script>
+
+<script src="Statistics.js"></script>
+
+
+<script src="GameCore.js"></script>
+
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
+<script src="angular.min.js"></script>
+<script src="Geometry.js"></script>
+<script src="Album.js"></script>
+<script src="Clock.js"></script>
+<script src="gameApp.js"></script>
+	
+
+</head>
+<body>
+
+<div id="gamecontroller"ng-app="game" ng-controller="gameCtrl" ><!-- spans entire view-->
+
+<table id = "maintable" cellspacing="0">
+<tr>
+	<td>
+		<table id="tableGui" cellspacing="0">
+	    <tr ng-repeat = "column in core.clients track by $index">
+	    	<td ng-repeat = "cell in column track by $index">
+	    		<div class ="cell" id = "{{cell.name}}" ng-if = "cell.empty == undefined">		
+	    			<div id="progress" class = "progress">	
+	    				<div id="bar" class = "progress"></div>
+	    				
+	    			</div>
+	    			<div id ="takenbar"></div>
+	    			<img id="img" class = "cellImg" ng-click="cell.execute()"  ng-src="{{cell.imgPath}}">  
+	    			<div id="rec" ng-if="cell.recovered != undefined && cell.recovered === false"></div>  			
+	    			<div id="disablesign" ng-if="cell.currentStateName != 'e'"></div>  	
+	    			<div id="firstclicksign" ng-if="cell.secondClick"></div>
+	    			<div class="cost" ng-if='cell.statistics.typeOfClient ==="plant" || cell.statistics.typeOfClient ==="shop"' >
+	    			<p ng-repeat ="res in cell.statistics.resourcesList" > {{res.value}}</p>
+	    			</div>
+	    		</div>
+	    	</td>
+	    </tr>
+		</table>
+	</td>
+	<td>
+	<div ng-if ="geometry.isOptionBarVertical">
+		<table id="tableCancel" cellspacing="0">
+			<tr> 
+				<td>
+					<p id="stopbutton" ng-click = "stopGame()" ng-if="gameStarted === true">STOP</p>
+				</td>
+			</tr>
+			<tr> 
+				<td>
+					<p id="stopbutton" ng-click = "startGame()" ng-if="gameStarted === false">START</p>
+				</td>
+			</tr>
+			<tr ng-repeat ="resource in core.resources"> 
+				<td>
+					<div id="{{resource.id}}"  >{{resource.value}}</div>
+				</td>
+			</tr>
+			<tr ng-repeat = "cancel in cancelClients track by $index">
+				<td >
+					<div class = "cancel"  ng-if = "cancel.secondClick">
+						<img class = "cancelimg" id = "{{cancel.name}}" ng-click="cancel.cancelClick()"  ng-src="{{cancel.imgPath}}"  ></img>
+						<!--  <div class ="cancelsign">
+							<img class = "cancelimg"  ng-src="{{core.statistics.gui.cancelImg.src}}"></img>
+						</div>-->
+						<div ng-init = "afterCancelAdded()"></div>
+					</div>
+				</td>
+			</tr> 
+		</table>
+	</div>
+	</td>
+</tr>
+<tr>
+	<td>
+	<div ng-if ="!(geometry.isOptionBarVertical)">
+		<table id="tableCancel" cellspacing="0">
+			<tr >
+				<td> 
+					<p id="stopbutton" ng-click = "stopGame()" ng-if="gameStarted === true">STOP</p>
+				</td>
+				<td> 
+					<p id="stopbutton" ng-click = "startGame()" ng-if="gameStarted === false">START</p>
+				</td>
+				<td ng-repeat ="resource in core.resources"> 
+					<div id="{{resource.id}}" >{{resource.value}}</div>
+				</td>
+				
+				<td ng-repeat = "cancel in cancelClients track by $index" >
+					<div class = "cancel"  ng-if = "cancel.secondClick">
+						<img class = "cancelimg" id = "{{cancel.name}}"  ng-click="cancel.cancelClick()" ng-src="{{cancel.imgPath}}"  ></img>
+						<!-- <div class ="cancelsign">
+							<img class = "cancelimg" ng-click="cancel.cancelClick()" ng-src="{{core.statistics.gui.cancelImg.src}}"></img>
+						</div> -->
+						<div ng-init = "afterCancelAdded()"></div>
+					</div>
+				</td>
+			</tr> 
+		</table>
+	</div>
+	</td>
+	<td></td>
+</tr>
+</table>
+<div id = "initScreen" ng-if="beginOfGame === true">
+	
+	<div ng-repeat ="race in raceNames">
+	<label>
+	<input type="radio"  ng-model="userChoice.race" value="{{race}}" >
+	{{race}}
+	</label>
+	<br/>	 
+	</div>
+	<br/>
+	<div ng-repeat ="speed in gameSpeeds">
+	<label>
+	<input type="radio"  ng-model="userChoice.gameSpeed" value="{{speed.value}}" >
+	{{speed.name}}
+	</label>
+	<br/>	 
+	</div>
+	<button ng-click="initApplication()">START!</button>
+</div>
+
+</div>
+</body>
+</html>
